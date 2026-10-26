@@ -1,0 +1,632 @@
+# AudioRecord vocabulary — domain terms the speech models must spell correctly.
+#
+# Format: one entry per line; "#" starts a comment; "term: alias, alias" lists other
+# spellings of the same term. Duplicates are merged. After editing, rebuild and install:
+#     scripts/build-app.sh --install
+#
+# How each kind of entry is used:
+#   single word   (sertraline)          corrected when the Parakeet engine mishears it
+#                                        (acoustic match of the audio against the term)
+#   phrase        (tardive dyskinesia)  hint for the Apple engine only — put rare words of
+#                                        a phrase on their own line to get corrections
+#   ACRONYM       (PHQ-9)               hint for the Apple engine; also fixes spelling of an
+#                                        exact hearing (PHQ9 → PHQ-9)
+# Only list words the models get wrong. Ordinary words (tapering, program) are already
+# transcribed correctly and only cause wrong replacements of similar-sounding words.
+
+## Antidepressants (generic)
+sertraline
+escitalopram
+citalopram
+fluoxetine
+paroxetine
+fluvoxamine
+venlafaxine
+desvenlafaxine
+duloxetine
+levomilnacipran
+milnacipran
+bupropion
+mirtazapine
+trazodone
+nefazodone
+vortioxetine
+vilazodone
+agomelatine
+esketamine
+ketamine
+zuranolone
+brexanolone
+gepirone
+amitriptyline
+nortriptyline
+imipramine
+desipramine
+clomipramine
+doxepin
+protriptyline
+trimipramine
+phenelzine
+tranylcypromine
+isocarboxazid
+selegiline
+moclobemide
+
+## Antidepressants (brand)
+Zoloft
+Lexapro
+Celexa
+Prozac
+Paxil
+Luvox
+Effexor
+Pristiq
+Cymbalta
+Fetzima
+Wellbutrin
+Remeron
+Desyrel
+Trintellix
+Viibryd
+Spravato
+Auvelity
+Zurzuvae
+Elavil
+Pamelor
+Tofranil
+Anafranil
+Silenor
+Nardil
+Parnate
+Emsam
+
+## Antipsychotics (generic)
+aripiprazole
+brexpiprazole
+cariprazine
+quetiapine
+olanzapine
+risperidone
+paliperidone
+ziprasidone
+lurasidone
+lumateperone
+asenapine
+iloperidone
+clozapine
+haloperidol
+chlorpromazine
+fluphenazine
+perphenazine
+thioridazine
+thiothixene
+trifluoperazine
+loxapine
+pimavanserin
+xanomeline
+trospium
+samidorphan
+
+## Antipsychotics (brand)
+Abilify
+Abilify Maintena
+Maintena
+Aristada
+Rexulti
+Vraylar
+Seroquel
+Zyprexa
+Risperdal
+Invega
+Invega Sustenna
+Sustenna
+Geodon
+Latuda
+Caplyta
+Saphris
+Fanapt
+Clozaril
+Haldol
+Thorazine
+Prolixin
+Trilafon
+Nuplazid
+Cobenfy
+Lybalvi
+
+## Mood stabilisers / anticonvulsants
+lithium carbonate
+Lithobid
+lamotrigine
+Lamictal
+valproate
+valproic acid
+divalproex
+Depakote
+carbamazepine
+Tegretol
+oxcarbazepine
+Trileptal
+topiramate
+Topamax
+gabapentin
+Neurontin
+pregabalin
+Lyrica
+
+## Anxiolytics, hypnotics, adrenergic agents
+buspirone
+Buspar
+hydroxyzine
+Vistaril
+Atarax
+clonazepam
+Klonopin
+lorazepam
+Ativan
+alprazolam
+Xanax
+diazepam
+Valium
+chlordiazepoxide
+Librium
+temazepam
+Restoril
+zolpidem
+Ambien
+eszopiclone
+Lunesta
+zaleplon
+suvorexant
+Belsomra
+lemborexant
+Dayvigo
+daridorexant
+ramelteon
+Rozerem
+melatonin
+propranolol
+Inderal
+clonidine
+Catapres
+guanfacine
+Intuniv
+prazosin
+Minipress
+doxazosin
+
+## ADHD medications
+methylphenidate
+Ritalin
+Concerta
+Focalin
+dexmethylphenidate
+amphetamine
+dextroamphetamine
+Adderall
+lisdexamfetamine
+Vyvanse
+Evekeo
+Mydayis
+Jornay
+Azstarys
+atomoxetine
+Strattera
+viloxazine
+Qelbree
+modafinil
+Provigil
+armodafinil
+Nuvigil
+
+## Substance-use medications
+naltrexone
+Vivitrol
+Revia
+buprenorphine
+Suboxone
+Subutex
+Sublocade
+Brixadi
+methadone
+acamprosate
+Campral
+disulfiram
+Antabuse
+varenicline
+Chantix
+lofexidine
+Lucemyra
+
+## Other medications and prescribing terms
+benztropine
+Cogentin
+diphenhydramine
+Benadryl
+metformin
+levothyroxine
+tramadol
+oxycodone
+hydrocodone
+fentanyl
+cannabidiol
+psilocybin
+pharmacogenomic
+GeneSight
+CYP2D6
+CYP2C19
+therapeutic drug monitoring
+lithium level
+valproate level
+trough level
+prior authorization
+long-acting injectable
+
+## Adverse effects and syndromes
+akathisia
+tardive dyskinesia
+tardive
+dyskinesia
+dystonia
+extrapyramidal
+parkinsonism
+neuroleptic malignant syndrome
+neuroleptic
+serotonin syndrome
+discontinuation syndrome
+agranulocytosis
+neutropenia
+hyperprolactinemia
+galactorrhea
+gynecomastia
+metabolic syndrome
+hyperglycemia
+dyslipidemia
+QTc prolongation
+orthostatic hypotension
+anticholinergic
+somnolence
+hypersomnia
+bruxism
+hyperhidrosis
+myoclonus
+nystagmus
+ataxia
+polyuria
+polydipsia
+hyponatremia
+hypothyroidism
+nephrogenic diabetes insipidus
+insipidus
+anorgasmia
+emotional blunting
+activation syndrome
+paradoxical reaction
+hepatotoxicity
+Stevens-Johnson syndrome
+Stevens-Johnson
+
+## Diagnoses
+major depressive disorder
+persistent depressive disorder
+dysthymia
+dysthymic
+premenstrual dysphoric disorder
+disruptive mood dysregulation disorder
+bipolar disorder
+cyclothymic disorder
+cyclothymia
+generalized anxiety disorder
+panic disorder
+agoraphobia
+social anxiety disorder
+selective mutism
+obsessive-compulsive disorder
+body dysmorphic disorder
+dysmorphic
+hoarding disorder
+trichotillomania
+excoriation disorder
+excoriation
+posttraumatic stress disorder
+complex PTSD
+acute stress disorder
+adjustment disorder
+reactive attachment disorder
+schizophrenia
+schizoaffective disorder
+schizoaffective
+schizophreniform disorder
+schizophreniform
+delusional disorder
+brief psychotic disorder
+schizotypal
+schizoid
+attention-deficit hyperactivity disorder
+autism spectrum disorder
+oppositional defiant disorder
+conduct disorder
+intermittent explosive disorder
+anorexia nervosa
+bulimia nervosa
+nervosa
+binge-eating disorder
+avoidant restrictive food intake disorder
+orthorexia
+insomnia disorder
+narcolepsy
+obstructive sleep apnea
+restless legs syndrome
+borderline personality disorder
+antisocial personality disorder
+narcissistic personality disorder
+histrionic personality disorder
+histrionic
+avoidant personality disorder
+dependent personality disorder
+obsessive-compulsive personality disorder
+paranoid personality disorder
+dissociative identity disorder
+dissociative amnesia
+depersonalization-derealization disorder
+somatic symptom disorder
+illness anxiety disorder
+conversion disorder
+functional neurological symptom disorder
+factitious disorder
+factitious
+alcohol use disorder
+opioid use disorder
+cannabis use disorder
+stimulant use disorder
+sedative use disorder
+gambling disorder
+postpartum depression
+postpartum
+perinatal depression
+perinatal
+seasonal affective disorder
+catatonia
+neurocognitive disorder
+neurocognitive
+Alzheimer's disease
+traumatic brain injury
+Tourette syndrome
+Tourette
+tic disorder
+enuresis
+encopresis
+gender dysphoria
+paraphilic disorder
+paraphilic
+hypomania
+mixed features
+rapid cycling
+treatment-resistant depression
+differential diagnosis
+provisional diagnosis
+
+## Symptoms, signs, mental status
+anhedonia
+avolition
+alogia
+affective flattening
+blunted affect
+labile affect
+euthymic
+dysphoric
+dysphoria
+psychomotor agitation
+psychomotor retardation
+psychomotor
+intrusive thoughts
+hypervigilance
+hyperarousal
+depersonalization
+derealization
+suicidal ideation
+passive suicidal ideation
+active suicidal ideation
+homicidal ideation
+self-harm
+non-suicidal self-injury
+parasuicidal
+hallucinations
+auditory hallucinations
+visual hallucinations
+tactile hallucinations
+olfactory hallucinations
+command hallucinations
+delusions
+persecutory delusions
+grandiose delusions
+delusions of reference
+ideas of reference
+somatic delusions
+erotomanic
+nihilistic delusions
+paranoid ideation
+thought broadcasting
+thought insertion
+thought withdrawal
+thought blocking
+loosening of associations
+flight of ideas
+pressured speech
+poverty of speech
+neologisms
+perseveration
+echolalia
+echopraxia
+waxy flexibility
+reassurance seeking
+hypochondriasis
+somatization
+malingering
+anergia
+abulia
+hypersomnolence
+hypnagogic
+hypnopompic
+hyperphagia
+emotional dysregulation
+affect dysregulation
+dysregulation
+executive dysfunction
+distractibility
+mental status examination
+perceptual disturbances
+
+## Rating scales and assessments
+PHQ-9
+PHQ-2
+GAD-7
+PCL-5
+MDQ
+ASRS
+Y-BOCS
+HAM-D
+HAM-A
+MADRS
+Beck Depression Inventory
+Beck Anxiety Inventory
+C-SSRS
+Columbia Suicide Severity Rating Scale
+AUDIT-C
+DAST-10
+CAGE questionnaire
+MoCA
+MMSE
+Montreal Cognitive Assessment
+Mini-Mental State Examination
+ACE score
+adverse childhood experiences
+Vanderbilt
+Conners
+YMRS
+Young Mania Rating Scale
+PANSS
+BPRS
+CAPS-5
+PSQI
+Epworth Sleepiness Scale
+Epworth
+EPDS
+Edinburgh Postnatal Depression Scale
+SCID
+DSM-5
+DSM-5-TR
+ICD-10
+ICD-11
+WHODAS
+AIMS
+Abnormal Involuntary Movement Scale
+Barnes Akathisia Rating Scale
+CIWA
+COWS
+means restriction
+collateral information
+psychoeducation
+biopsychosocial
+
+## Therapies and modalities
+cognitive behavioral therapy
+dialectical behavior therapy
+dialectical
+acceptance and commitment therapy
+EMDR
+eye movement desensitization and reprocessing
+desensitization
+reprocessing
+exposure and response prevention
+prolonged exposure
+cognitive processing therapy
+trauma-focused
+interpersonal therapy
+psychodynamic
+psychoanalytic
+mentalization-based
+mentalization
+schema therapy
+transference-focused
+motivational interviewing
+behavioral activation
+mindfulness-based cognitive therapy
+transcranial magnetic stimulation
+transcranial
+electroconvulsive therapy
+electroconvulsive
+ketamine-assisted psychotherapy
+psychedelic-assisted
+contingency management
+relapse prevention
+harm reduction
+grounding techniques
+distress tolerance
+emotion regulation
+interpersonal effectiveness
+chain analysis
+diary card
+thought record
+cognitive restructuring
+cognitive distortions
+catastrophizing
+all-or-nothing thinking
+overgeneralization
+graded exposure
+exposure hierarchy
+systematic desensitization
+habit reversal
+biofeedback
+neurofeedback
+stimulus control
+sleep restriction
+therapeutic alliance
+
+## Levels of care, legal, labs
+partial hospitalization
+intensive outpatient
+residential treatment
+crisis stabilization
+involuntary hold
+Baker Act
+civil commitment
+duty to warn
+Tarasoff
+HIPAA
+release of information
+telepsychiatry
+mandated reporter
+capacity evaluation
+thyroid panel
+TSH
+complete blood count
+comprehensive metabolic panel
+lipid panel
+hemoglobin A1C
+prolactin level
+QTc interval
+liver function tests
+creatinine
+eGFR
+urine drug screen
+toxicology screen
+
+## Neuroscience
+serotonin
+dopamine
+norepinephrine
+glutamate
+GABA
+NMDA receptor
+acetylcholine
+cortisol
+HPA axis
+amygdala
+hippocampus
+prefrontal cortex
+limbic system
+neuroplasticity
+neurotransmitter
+reuptake inhibitor
+partial agonist
